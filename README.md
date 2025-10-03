@@ -1,5 +1,11 @@
 # ABOUT PROJECT:
-TBD
+This project creates a todo list and task tracker for use on embedded microcontrollers.
+The project is written entirely in Python and requires MicroPython to be installed on the board.
+
+# SUPPORTED HARDWARE:
+- M5Stack Cardputer
+- ESP32-S3-FN8 (8 Mb RAM)
+- LCD 135x240 (driver ST7789V2)
 
 # IN PROCESS:
 - LCD driver for ST7789V2 on MicroPython
