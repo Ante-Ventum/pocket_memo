@@ -1,20 +1,28 @@
+# DISPLAY main config:
+LCD_CONFIG = {
+    'WIDTH': 135,
+    'HEIGHT': 240,
+    'X_START': 52,  # standart driver's buffer 240x240
+    'Y_START': 40,  # so need custom offset for non-standart lcd
+}
+
+
 # DISPLAY pins config:
 LCD_PINS = {
     'SCK': 36,
     'MOSI': 35,
+    'MISO': None,
     'CS': 37,
     'RST': 33,
     'DC': 34,
     'BL': 38
 }
 
-LCD_SCK_PIN = 36
-LCD_MOSI_PIN = 35
-LCD_CS_PIN = 37
-LCD_RST_PIN = 33
-LCD_DC_PIN = 34
-LCD_BL_PIN = 38
-
 # SPI bus config:
-SPI_BUS = 1
-SPI_BAUDRATE = 40_000_000
+SPI_CONFIG = {
+    'BUS': 1,
+    'BAUDRATE': 40_000_000,
+    'POLARITY': 0,
+    'PHASE': 0,
+
+}
