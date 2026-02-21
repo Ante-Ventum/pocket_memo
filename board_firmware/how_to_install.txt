@@ -9,7 +9,10 @@ or from the current Git repository [pip install -r requirements.txt]
 3. Determine the port to which the board is connected (e.g., in Windows --> Device Manager):
 [for example, our port will be COM5]
 
-4. Use the firmware file from the current repository *m5stack_micropython.bin* and run command:
+4. Erase the all data from chip:
+[esptool -p COM5 erase-flash]
+
+5. Use the firmware file from the current repository *m5stack_micropython.bin* and run command:
 [esptool --port COM5 --baud 460800 write_flash 0 board_firmware/m5stack_micropython.bin]
 
 where 
@@ -18,5 +21,5 @@ where
    (-) write_flash 0 = command to write firmware starting from the first memory cell
    (-) board_firmware/m5stack_micropython.bin = path to the .bin firmware file
 
-5. Wait for completion. Done, now the board is flashed with MicroPython!
+6. Wait for completion. Done, now the board is flashed with MicroPython!
 (you can check it yourself in the Thonny IDE).
