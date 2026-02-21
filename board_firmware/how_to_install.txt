@@ -1,0 +1,22 @@
+INSTRUCTION
+=====
+1. On a PC with Python (version 3) installed, install *esptool* by command:
+[pip install esptool]
+or from the current Git repository [pip install -r requirements.txt]
+
+2. Connect the board to the PC via USB in boot mode (with the Btn_G0/BOOT button pressed).
+
+3. Determine the port to which the board is connected (e.g., in Windows --> Device Manager):
+[for example, our port will be COM5]
+
+4. Use the firmware file from the current repository *m5stack_micropython.bin* and run command:
+[esptool --port COM5 --baud 460800 write_flash 0 board_firmware/m5stack_micropython.bin]
+
+where 
+   (-) COM5 = board connection port (this changes!)
+   (-) --baud 460800 = change data transfer rate to higher speed
+   (-) write_flash 0 = command to write firmware starting from the first memory cell
+   (-) board_firmware/m5stack_micropython.bin = path to the .bin firmware file
+
+5. Wait for completion. Done, now the board is flashed with MicroPython!
+(you can check it yourself in the Thonny IDE).
